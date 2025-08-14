@@ -8,13 +8,18 @@ const router = createRouter({
     {
       path: "/",
       component: defaultLayout,
-      children : [
+      children: [
         {
-          path : "",
-          name : "home",
+          path: "",
+          name: "home",
           component: () => import("../views/HomeView.vue"),
-        }
-      ]
+        },
+        {
+          path: "/task5",
+          name: "task5",
+          component: () => import("../views/Task5UserApiFetch.vue"),
+        },
+      ],
     },
     {
       path: "/about",
